@@ -3,11 +3,14 @@ require 'nest_thermostat'
 nest_user = ENV['NEST_USER']
 nest_password = ENV['NEST_PASSWORD']
 
+#use_metric_system = true
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
 	nest = NestThermostat::Nest.new({email: nest_user,password: nest_password})
 	first_nest = nest.status["shared"][nest.device_id]
 	temp = nest.temperature.to_i; 
+	
+	temp = f_to_c(temp)
 
 	away = nest.away
 	state = "off"	
@@ -33,6 +36,6 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
 end
 
 # Converts fahrenheit to celcius.
-#def f_to_c(temp)
-#	return (((input - 32) * 5) / 9)
-#end
+def f_to_c(temp)
+	return (((input - 32) * 5) / 9)
+end
