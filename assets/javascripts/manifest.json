@@ -5,9 +5,9 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "assets/birds.svg",
+      "src": "assets/home.png",
       "sizes": "192x192",
-      "type": "image/svg",
+      "type": "image/png",
       "density": "4.0"
     }
   ],
