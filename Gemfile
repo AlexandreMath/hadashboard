@@ -8,7 +8,7 @@ gem 'oa-openid'
 gem 'omniauth-heroku', '~> 0.2.0.pre'
 gem 'oauth2'
 
-# additional widgets
+# Widgets
 gem 'nest_thermostat'
 
 # JSON

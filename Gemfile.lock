@@ -82,12 +82,17 @@ GEM
     fastercsv (1.5.5)
     hashie (3.3.1)
     hike (1.2.3)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
     json (1.8.1)
     json_pure (1.8.1)
     jwt (1.0.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nest_thermostat (0.0.4)
+      httparty (~> 0.8.3)
     oa-core (0.3.2)
     oa-openid (0.3.2)
       oa-core (= 0.3.2)
@@ -161,6 +166,7 @@ DEPENDENCIES
   dm-postgres-adapter
   dm-sqlite-adapter
   json
+  nest_thermostat
   oa-openid
   oauth2
   omniauth-heroku (~> 0.2.0.pre)
