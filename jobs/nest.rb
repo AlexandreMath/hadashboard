@@ -3,7 +3,7 @@ require 'nest_thermostat'
 nest_user = ENV['NEST_USER']
 nest_password = ENV['NEST_PASSWORD']
 
-use_metric_system = false
+use_metric_system = true
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
 	nest = NestThermostat::Nest.new({email: nest_user,password: nest_password})
