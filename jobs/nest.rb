@@ -3,15 +3,15 @@ require 'nest_thermostat'
 nest_user = ENV['NEST_USER']
 nest_password = ENV['NEST_PASSWORD']
 
+use_metric_system = false
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
 	nest = NestThermostat::Nest.new({email: nest_user,password: nest_password})
 	first_nest = nest.status["shared"][nest.device_id]
 	temp = nest.temperature.to_i; 
-	
-	defined?(use_metric_system) or use_metric_system = true
-		temp = f_to_c(temp)
-	end
+
+	temp = f_to_c(temp)
+
 	away = nest.away
 	state = "off"	
 	leaf_src = ""
