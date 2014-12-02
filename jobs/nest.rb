@@ -8,7 +8,7 @@ nest_password = ENV['NEST_PASSWORD']
 SCHEDULER.every '1m', :first_in => 0 do |job|
 	nest = NestThermostat::Nest.new({email: nest_user,password: nest_password})
 	first_nest = nest.status["shared"][nest.device_id]
-	temp = nest.temperature.to_i; 
+	temp = nest.temperature.to_i 
 	
 	temp = f_to_c(temp)
 
