@@ -1,0 +1,15 @@
+{
+  "short_name": "Wodehouse",
+  "name": "Wodehouse",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/images/birds.svg",
+      "sizes": "192x192",
+      "type": "image/svg",
+      "density": "4.0"
+    }
+  ],
+  "orientation": "landscape"
+}
