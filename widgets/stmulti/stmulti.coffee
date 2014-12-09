@@ -4,6 +4,7 @@ class Dashing.Stmulti extends Dashing.Widget
     @queryState()
 
   @accessor 'value',
+    get: -> @_value ? "Unknown"
     set: (key, value) -> @_value = value
 
   queryState: ->
