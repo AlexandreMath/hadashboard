@@ -4,7 +4,6 @@ class Dashing.Stmulti extends Dashing.Widget
     @queryState()
 
   @accessor 'value',
-    get: -> if @_value else 'inactive'
     set: (key, value) -> @_value = value
 
   queryState: ->
