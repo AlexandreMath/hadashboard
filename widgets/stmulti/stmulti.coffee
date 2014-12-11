@@ -10,7 +10,7 @@ class Dashing.Stmulti extends Dashing.Widget
   queryState: ->
     $.get '/smartthings/dispatch',
       widgetId: @get('id'),
-      deviceType: 'acceleration',
+      deviceType: 'contact',
       deviceId: @get('device')
       (data) =>
         json = JSON.parse data
